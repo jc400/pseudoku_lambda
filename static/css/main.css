@@ -64,18 +64,22 @@ li, main, nav, nav a, ol, p, section, span, ul {
 
 #submitbutt {
     display: block;
-    font-size: 14px;
+    font-size: 18px;
     padding: 1%;
     width: 40%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
+    background-color: var(--accentcolor);
+    border-style: none;
+    border-radius: 20px;
 }
 
 #nextpuzzleControl {
     font-size: 14px;
     float: right;
     text-decoration: none;
+    color: rgb(100,100,100);
 }
 
 .puzzleControl {
