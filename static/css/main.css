@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+/*
+    main.css
+
+    This holds the main styling rules for the pseudoku site. 
+*/
+
+/* ============================= */
+/*             RESET             */
+/* ============================= */
+
+article, div, footer, header, nav, section, ul { display: block; }
+ 
+body, div, footer, h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;  
+}
+
+
+/* ============================= */
+/*         FOR PUZZLE DIV        */
+/* ============================= */
+
+#content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#puzzle {
+    width: min-content;
+    height: min-content;
+}
+#puzzle td > input {
+    height: 8vw;
+    width: 8vw;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#timer {
+    font-size: 14px;
+    border: 0pt;
+    text-align: left;
+    width: 100px;
+}
+
+#submitbutt {
+    display: block;
+    font-size: 14px;
+    padding: 1%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+#nextpuzzleControl {
+    font-size: 14px;
+    float: right;
+    text-decoration: none;
+}
+
+.puzzleControl {
+    display: inline;
+    float: right;
+    margin-left: 19px;
+    width: 19px;
+    height: 19px;
+}
+
+
+
+/* ============================= */
+/*       FOR PUZZLE TABLE        */
+/* ============================= */
+
+/* style number inputs inside cells */
+#puzzle td > input {
+    color: #000;
+    text-align: center;
+    font-size: 18pt;
+    border: 0px;
+    padding:0px;
+}
+#puzzle .cellinput {
+    color: rgb(170, 99, 215);
+    font-weight: bold;
+}
+
+/* styling for cell borders--call out specific cells for thicker lines */
+#puzzle table { border-collapse: collapse; }
+#puzzle td {
+    border: 1px #888 solid;
+    padding: 0px;
+}
+#puzzle #a30,#puzzle #a31,#puzzle #a32,#puzzle #a33,#puzzle #a34,
+#puzzle #a35,#puzzle #a36,#puzzle #a37,#puzzle #a38,#puzzle #a60,
+#puzzle #a61,#puzzle #a62,#puzzle #a63,#puzzle #a64,#puzzle #a65,
+#puzzle #a66,#puzzle #a67,#puzzle #a68 {
+    border-top: 2px #222 solid;
+}
+#puzzle #a03,#puzzle #a13,#puzzle #a23,#puzzle #a33,#puzzle #a43,
+#puzzle #a53,#puzzle #a63,#puzzle #a73,#puzzle #a83,#puzzle #a06,
+#puzzle #a16,#puzzle #a26,#puzzle #a36,#puzzle #a46,#puzzle #a56,
+#puzzle #a66,#puzzle #a76,#puzzle #a86 {
+    border-left: 2px #222 solid;
+}
+
+
+/* ==================== */
+/*       FOR MODAL      */
+/* ==================== */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+#completeModal {
+    text-align: center;
+}
+
+#completeModal > div > div {
+    margin: 20px 0px;
+}
+
+#completeModal table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#completeModal td {
+    width: 50%;
+    text-align: center;
+}
+#completeModal button {
+    margin-left: 20px;
+}
+
+
+/* ==================== */
+/*    FOR SETTINGS      */
+/* ==================== */
+
+/* Fix settings to corner, hide content pane, show only icon */
+#settings {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+#settingsIcon {
+    display: block;
+    height: 25px;
+    width: 25px;
+    margin: 10px;
+    opacity: 0.4;
+}
+#settingsContent {
+    display: none;
+    padding: 30px;
+    background-color: white;
+    box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+}
+
+
+/* for individual difficulty radio options */
+#settingsContent label {
+    display: block;
+    margin: 5px;
+    width: 100%;
+}
+#settingsContent label > input {
+    float: right;
+}
+#settingsContent .diff_circle {
+    width: 15px;
+    height: 15px;
+    display: inline;
+}
+
+#settingsContent > div {
+    width: 100%;
+    margin: 30px 0px;
+}

@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/*
+    darkmode.css
+
+    This can theoretically be loaded after main styling, to override color rules.
+
+    NOTES:
+    -we'll need a gray/dark background color. Not sure how well cascade will do this,
+    it may be enough to declare it on body, or we might have to apply individually to lots of elems.
+    -will definitely need to override the settings popup. Also change the shadow color to be actual black.
+
+    -text content will all need to be white.
+    -borders for table will need to be white.
+    -will have to look into colors of interactive elements: submit buttons, gear/icons.
+*/
+
+body, input {
+    background-color: rgb(50,50,50);
+    color: white;
+}
+
+button {
+    background-color: rgb(100,100,100);
+    color: white;
+}
+
+#settingsContent {
+    background-color: rgb(75,75,75);
+    box-shadow: rgb(5, 5, 5) 5px 5px 15px;
+}
+
+
+/* ============================= */
+/*       FOR PUZZLE TABLE        */
+/* ============================= */
+
+/* style number inputs inside cells */
+#puzzle td > input {
+    color: #FFF;
+    text-align: center;
+    font-size: 18pt;
+    border: 0px;
+    padding:0px;
+}
+#puzzle .cellinput {
+    color: rgb(170, 99, 215);
+    font-weight: bold;
+}
+
+/* styling for cell borders--call out specific cells for thicker lines */
+#puzzle table { border-collapse: collapse; }
+#puzzle td {
+    border: 1px #aaa solid;
+    padding: 0px;
+}
+#puzzle #a30,#puzzle #a31,#puzzle #a32,#puzzle #a33,#puzzle #a34,
+#puzzle #a35,#puzzle #a36,#puzzle #a37,#puzzle #a38,#puzzle #a60,
+#puzzle #a61,#puzzle #a62,#puzzle #a63,#puzzle #a64,#puzzle #a65,
+#puzzle #a66,#puzzle #a67,#puzzle #a68 {
+    border-top: 2px #fff solid;
+}
+#puzzle #a03,#puzzle #a13,#puzzle #a23,#puzzle #a33,#puzzle #a43,
+#puzzle #a53,#puzzle #a63,#puzzle #a73,#puzzle #a83,#puzzle #a06,
+#puzzle #a16,#puzzle #a26,#puzzle #a36,#puzzle #a46,#puzzle #a56,
+#puzzle #a66,#puzzle #a76,#puzzle #a86 {
+    border-left: 2px #fff solid;
+}
+
+/* ==================== */
+/*       FOR MODAL      */
+/* ==================== */
+.modal {
+    background-color: rgb(200,200,200); /* Fallback color */
+    background-color: rgba(200,200,200,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: rgb(75,75,75);
+    color: white;
+}
