@@ -57,8 +57,7 @@ function getpuzzle(puzzleid) {
     .then( (indata) => indata.json() )
     .then( (indata) => populate(indata) )
     .then( (indata) => savePuzzleIdToClientState(indata) )
-    .then( (indata) => setUpSubmitButton(indata) )
-    .then( (indata) => setUpRetryButton(indata) );
+    .then( (indata) => setUpSubmitButton(indata) );
 }
 
 function submitpuzzle(outdata) {
