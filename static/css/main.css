@@ -6,6 +6,17 @@
     This holds the main styling rules for the pseudoku site. 
 */
 
+
+/* ============================= */
+/*             VARS              */
+/* ============================= */
+:root{
+    --accentcolor: rgb(170, 99, 215);
+
+}
+
+
+
 /* ============================= */
 /*             RESET             */
 /* ============================= */
@@ -90,7 +101,7 @@ li, main, nav, nav a, ol, p, section, span, ul {
     padding:0px;
 }
 #puzzle .cellinput {
-    color: rgb(170, 99, 215);
+    color: var(--accentcolor);
     font-weight: bold;
 }
 
