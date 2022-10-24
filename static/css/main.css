@@ -6,9 +6,12 @@
 */
 @font-face {
     font-family: Rubik;
-    src: url("resources/Rubik-Regular.ttf") format("truetype");
+    src: url("../resources/Rubik-Regular.ttf") format("truetype");
 }
-
+@font-face {
+    font-family: Rubik-Light;
+    src: url("../resources/Rubik-Light.ttf") format("truetype");
+}
 
 :root{
     --accentcolor: rgb(170, 99, 215);
@@ -52,7 +55,7 @@
     max-width: 50px;
 
     /* style the font */
-    font-family: Rubik serif;
+    font-family: Rubik-Light;
     font-size: 1.5rem;
     color: #000;
     text-align: center;
@@ -62,6 +65,7 @@
 #puzzle .cellinput {
     color: var(--accentcolor);
     font-weight: bold;
+    font-family: Rubik;
 }
 
 /* styling for cell borders--call out specific cells for thicker lines */
