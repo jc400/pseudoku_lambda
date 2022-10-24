@@ -82,7 +82,7 @@ li, main, nav, nav a, ol, p, section, span, ul {
 }
 #submitbutt:hover {
     background-color: var(--accentcolor);
-    transition-duration: 2s;
+    cursor: pointer;
 }
 
 #nextpuzzleControl {
