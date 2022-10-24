@@ -26,13 +26,19 @@ function init() {
     // initialize with a game
     getpuzzle(clientState['difficulty']);
 
+    // set up skip button
     document.getElementById("nextpuzzleControl").onclick = function () {
         getpuzzle(clientState['difficulty']);
     }
 
+    // callbacks for changing difficulty
     document.querySelectorAll("#difficulty a.dropdown-item").forEach(function(item){
         item.onclick = changeDifficulty;
     })
+
+    // set difficulty button to correct diff
+    setDifficultyCircles();
+
 }
 window.onload = init;
 
@@ -79,12 +85,30 @@ function submitpuzzle(outdata) {
 }
 
 function changeDifficulty(event) {
-    console.log(event)
+    // get difficulty from selected menu item
     let newDiff = event.target.dataset["diff"];
-    console.log(event.target);
+
+    // save and get new puzzle
     clientState["difficulty"] = newDiff;
     getpuzzle(clientState["difficulty"]);
+
+    // update circles
+    setDifficultyCircles();
 }
+
+function setDifficultyCircles() {
+    let empty = '<img src="images/empty_circle2.png" class="diff_circle">';
+    let solid = '<img src="images/solid_circle.png" class="diff_circle">';
+    let content = "";
+
+    if (clientState["difficulty"] === "one"){ content = solid + empty + empty + empty; }
+    if (clientState["difficulty"] === "two"){ content = solid + solid + empty + empty; }
+    if (clientState["difficulty"] === "three"){ content = solid + solid + solid + empty; }
+    if (clientState["difficulty"] === "four"){ content = solid + solid + solid + solid; }    
+    
+    document.getElementById("difficulty_button").innerHTML = content;
+}
+        
 
 // ---------- LOW LEVEL ---------- //
 
