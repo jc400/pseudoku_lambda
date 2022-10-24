@@ -1,0 +1,410 @@
+<!doctype html>
+<title>Pseudoku</title>
+
+<head>
+    <title>Pseudoku</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main2.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="module" src="js/game.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+        <div id="puzzle">
+            <div class="mb-2">
+                <input id="timer" name="timer" type="text" value="00:00:00" readonly="true" class="text-start fs-6 border-0">
+                <div id="difficulty" class="float-end">
+                    <img src="images/solid_circle.png" class="diff_circle"><img src="images/empty_circle2.png" class="diff_circle"><img src="images/empty_circle2.png" class="diff_circle"><img src="images/empty_circle2.png" class="diff_circle">
+                </div>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+
+                        <td id="a00">
+                            <input name="a00" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a01">
+                            <input name="a01" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a02">
+                            <input name="a02" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a03">
+                            <input name="a03" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a04">
+                            <input name="a04" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a05">
+                            <input name="a05" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a06">
+                            <input name="a06" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a07">
+                            <input name="a07" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a08">
+                            <input name="a08" type="text" maxlength="1" size="1">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td id="a10">
+                            <input name="a10" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a11">
+                            <input name="a11" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a12">
+                            <input name="a12" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a13">
+                            <input name="a13" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a14">
+                            <input name="a14" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a15">
+                            <input name="a15" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a16">
+                            <input name="a16" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a17">
+                            <input name="a17" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a18">
+                            <input name="a18" type="text" maxlength="1" size="1">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td id="a20">
+                            <input name="a20" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a21">
+                            <input name="a21" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a22">
+                            <input name="a22" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a23">
+                            <input name="a23" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a24">
+                            <input name="a24" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a25">
+                            <input name="a25" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a26">
+                            <input name="a26" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a27">
+                            <input name="a27" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a28">
+                            <input name="a28" type="text" maxlength="1" size="1">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td id="a30">
+                            <input name="a30" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a31">
+                            <input name="a31" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a32">
+                            <input name="a32" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a33">
+                            <input name="a33" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a34">
+                            <input name="a34" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a35">
+                            <input name="a35" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a36">
+                            <input name="a36" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a37">
+                            <input name="a37" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a38">
+                            <input name="a38" type="text" maxlength="1" size="1">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td id="a40">
+                            <input name="a40" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a41">
+                            <input name="a41" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a42">
+                            <input name="a42" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a43">
+                            <input name="a43" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a44">
+                            <input name="a44" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a45">
+                            <input name="a45" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a46">
+                            <input name="a46" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a47">
+                            <input name="a47" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a48">
+                            <input name="a48" type="text" maxlength="1" size="1">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td id="a50">
+                            <input name="a50" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a51">
+                            <input name="a51" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a52">
+                            <input name="a52" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a53">
+                            <input name="a53" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a54">
+                            <input name="a54" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a55">
+                            <input name="a55" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a56">
+                            <input name="a56" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a57">
+                            <input name="a57" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a58">
+                            <input name="a58" type="text" maxlength="1" size="1">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td id="a60">
+                            <input name="a60" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a61">
+                            <input name="a61" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a62">
+                            <input name="a62" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a63">
+                            <input name="a63" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a64">
+                            <input name="a64" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a65">
+                            <input name="a65" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a66">
+                            <input name="a66" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a67">
+                            <input name="a67" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a68">
+                            <input name="a68" type="text" maxlength="1" size="1">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td id="a70">
+                            <input name="a70" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a71">
+                            <input name="a71" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a72">
+                            <input name="a72" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a73">
+                            <input name="a73" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a74">
+                            <input name="a74" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a75">
+                            <input name="a75" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a76">
+                            <input name="a76" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a77">
+                            <input name="a77" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a78">
+                            <input name="a78" type="text" maxlength="1" size="1">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td id="a80">
+                            <input name="a80" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a81">
+                            <input name="a81" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a82">
+                            <input name="a82" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a83">
+                            <input name="a83" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a84">
+                            <input name="a84" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a85">
+                            <input name="a85" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a86">
+                            <input name="a86" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a87">
+                            <input name="a87" type="text" maxlength="1" size="1">
+                        </td>
+
+                        <td id="a88">
+                            <input name="a88" type="text" maxlength="1" size="1">
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" id="spacer" class="text-decoration-none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <button id="submitbutt" type="button" class="d-block fs-4 p-2 ms-auto me-auto rounded-3 border-0 w-50">submit</button>
+                <a href="#" id="nextpuzzleControl" class="text-decoration-none link-secondary">skip</a>
+            </div>
+        </div>
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Congratulations</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>You finished the puzzle in <span id="yourtime"></span>.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" id="newpuzzleModal" class="btn btn-primary">New puzzle</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
