@@ -2,30 +2,13 @@
 
 /*
     main.css
-
-    This holds the main styling rules for the pseudoku site. 
+    This holds styling rules external to bootstrap classes
 */
 
 
-/* ============================= */
-/*             VARS              */
-/* ============================= */
 :root{
     --accentcolor: rgb(170, 99, 215);
     --clear-accentcolor: rgba(170, 99, 215, 0.541);
-}
-
-
-
-/* ============================= */
-/*         FOR PUZZLE DIV        */
-/* ============================= */
-
-#puzzle td > input {
-    height: 8vw;
-    width: 8vw;
-    max-height: 50px;
-    max-width: 50px;
 }
 
 .diff_circle {
@@ -50,11 +33,24 @@
 /*       FOR PUZZLE TABLE        */
 /* ============================= */
 
+/* collapse all borders inside sudoku table */
+#puzzle table { 
+    border-collapse: collapse; 
+}
+
+/* height & width of input controls overall puzzle size */
+#puzzle td > input {
+    height: 8vw;
+    width: 8vw;
+    max-height: 50px;
+    max-width: 50px;
+}
+
 /* style number inputs inside cells */
 #puzzle td > input {
+    font-size: 1.25rem;
     color: #000;
     text-align: center;
-    font-size: var(--big-text);
     border: 0px;
     padding:0px;
 }
@@ -64,7 +60,6 @@
 }
 
 /* styling for cell borders--call out specific cells for thicker lines */
-#puzzle table { border-collapse: collapse; }
 #puzzle td {
     border: 1px #888 solid;
     padding: 0px;
