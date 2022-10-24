@@ -18,13 +18,6 @@
     --clear-accentcolor: rgba(90, 136,173, 0.541);
 }
 
-.diff_circle {
-    width: 15px;
-    height: 15px;
-    display: inline;
-    margin: 1px;
-}
-
 
 #submitbutt {
     background-color: var(--clear-accentcolor);

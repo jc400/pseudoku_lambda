@@ -97,8 +97,8 @@ function changeDifficulty(event) {
 }
 
 function setDifficultyCircles() {
-    let empty = '<img src="images/empty_circle2.png" class="diff_circle">';
-    let solid = '<img src="images/solid_circle.png" class="diff_circle">';
+    let empty = "&#9675;"; //'<img src="images/empty_circle2.png" class="diff_circle">';
+    let solid = "&#9679;"; //'<img src="images/solid_circle.png" class="diff_circle">';
     let content = "";
 
     if (clientState["difficulty"] === "one")  { content = solid + empty + empty + empty; }
