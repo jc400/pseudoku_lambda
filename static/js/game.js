@@ -26,10 +26,6 @@ function init() {
     // initialize with a game
     getpuzzle(clientState['difficulty']);
 
-    // callbacks for settings buttons
-    document.getElementById("settingsIcon").onclick = showSettings;
-    document.getElementById("settingsSubmit").onclick = saveSettings;
-
     document.getElementById("nextpuzzleControl").onclick = function () {
         getpuzzle(clientState['difficulty']);
     }
@@ -78,39 +74,6 @@ function submitpuzzle(outdata) {
     });
 }
 
-function showSettings() {
-    // hide the settings button
-    document.getElementById("settingsIcon").style.display = "none";
-    
-    // show settings menu
-    document.getElementById("settingsContent").style.display = "block";
-
-    // Check make buttons match state
-    document.getElementById(clientState["difficulty"]).checked = true;
-    document.getElementById("username").value = clientState['username'];
-    document.getElementById("darkmodeButton").checked = clientState['darkmode'];
-}
-
-function saveSettings() {
-    // save settings into clientState
-    clientState["difficulty"] = document.querySelector("input[name='difficulty']:checked").value;
-    clientState["username"] = document.getElementById("username").value;
-    clientState["darkmode"] = document.getElementById("darkmodeButton").checked;
-
-    // check whether to toggle darkmode
-    if (clientState["darkmode"])    darkmodeOn();
-    else                            darkmodeOff();
-
-    // hide settings menu
-    document.getElementById("settingsContent").style.display = "none";
-
-    // show the settings button
-    document.getElementById("settingsIcon").style.display = "block";
-
-    return false; // so form doesn't submit and reload page
-}
-
-
 
 // ---------- LOW LEVEL ---------- //
 
@@ -146,13 +109,6 @@ function setUpSubmitButton(indata) {
         submitpuzzle(indata);
     }
     document.getElementById("submitbutt").onclick = submitButtonCallback;
-    return indata;
-}
-function setUpRetryButton(indata) {
-    function retryButtonCallback() {
-        populate(indata);
-    }
-    document.getElementById("retrypuzzleControl").onclick = retryButtonCallback;
     return indata;
 }
 
@@ -194,23 +150,5 @@ function handleCorrectSubmission(indata) {
     document.getElementById("newpuzzleModal").onclick = () => {
         modal.hide();
         getpuzzle(clientState['difficulty']);
-    }
-}
-
-// for settings
-function darkmodeOn() {
-    let dmStylesheet = document.getElementById("darkmodeStylesheet");
-    if (!dmStylesheet) {
-        dmStylesheet = document.createElement("link");
-        dmStylesheet.rel = "stylesheet";
-        dmStylesheet.href = "css/darkmode.css";
-        dmStylesheet.id = "darkmodeStylesheet";
-        document.getElementsByTagName("head")[0].appendChild(dmStylesheet);
-    }
-}
-function darkmodeOff() {
-    let dmStylesheet = document.getElementById("darkmodeStylesheet");
-    if (dmStylesheet) {
-        document.getElementsByTagName("head")[0].removeChild(dmStylesheet);
     }
 }
