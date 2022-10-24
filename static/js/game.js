@@ -185,18 +185,15 @@ function handleCorrectSubmission(indata) {
     TIMER.stop();
 
     // display completeModal, show users time
-    let modal = document.getElementById("completeModal");
-    modal.style.display = "block";
+    let modal = new bootstrap.Modal("#completeModal");
+    modal.show();
+
     document.getElementById("yourtime").innerText = "Your time was: " + indata.body.data.usertime;
 
     // set up event handler for button
     document.getElementById("newpuzzleModal").onclick = () => {
-        modal.style.display = "none";
+        modal.hide();
         getpuzzle(clientState['difficulty']);
-    }
-    document.getElementById("retrypuzzleModal").onclick = () => {
-        modal.style.display = "none";
-        document.getElementById("retrypuzzleControl").click();
     }
 }
 
