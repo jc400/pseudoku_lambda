@@ -12,7 +12,13 @@
 /* ============================= */
 :root{
     --accentcolor: rgb(170, 99, 215);
-
+    --clear-accentcolor: rgba(170, 99, 215, 0.541);
+    --light-gray: #888;
+    --reg-gray: rgb(100,100,100);
+    --dark-gray: #222;
+    --black: #000;
+    --little-text: 14px;
+    --big-text: 18px;
 }
 
 
@@ -56,7 +62,7 @@ li, main, nav, nav a, ol, p, section, span, ul {
 }
 
 #timer {
-    font-size: 14px;
+    font-size: var(--little-text);
     border: 0pt;
     text-align: left;
     width: 100px;
@@ -64,30 +70,22 @@ li, main, nav, nav a, ol, p, section, span, ul {
 
 #submitbutt {
     display: block;
-    font-size: 18px;
-    padding: 1%;
+    font-size: var(--big-text);
+    padding: 3%;
     width: 40%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
-    background-color: var(--accentcolor);
-    border-style: none;
+    background-color: var(--clear-accentcolor);
+    border-style: 1px var(--reg-gray) solid;
     border-radius: 20px;
 }
 
 #nextpuzzleControl {
-    font-size: 14px;
+    font-size: var(--little-text);
     float: right;
     text-decoration: none;
-    color: rgb(100,100,100);
-}
-
-.puzzleControl {
-    display: inline;
-    float: right;
-    margin-left: 19px;
-    width: 19px;
-    height: 19px;
+    color: var(--reg-gray);
 }
 
 
@@ -98,9 +96,9 @@ li, main, nav, nav a, ol, p, section, span, ul {
 
 /* style number inputs inside cells */
 #puzzle td > input {
-    color: #000;
+    color: var(--black);
     text-align: center;
-    font-size: 18pt;
+    font-size: var(--big-text);
     border: 0px;
     padding:0px;
 }
@@ -112,20 +110,20 @@ li, main, nav, nav a, ol, p, section, span, ul {
 /* styling for cell borders--call out specific cells for thicker lines */
 #puzzle table { border-collapse: collapse; }
 #puzzle td {
-    border: 1px #888 solid;
+    border: 1px var(--light-gray) solid;
     padding: 0px;
 }
 #puzzle #a30,#puzzle #a31,#puzzle #a32,#puzzle #a33,#puzzle #a34,
 #puzzle #a35,#puzzle #a36,#puzzle #a37,#puzzle #a38,#puzzle #a60,
 #puzzle #a61,#puzzle #a62,#puzzle #a63,#puzzle #a64,#puzzle #a65,
 #puzzle #a66,#puzzle #a67,#puzzle #a68 {
-    border-top: 2px #222 solid;
+    border-top: 2px var(--dark-gray) solid;
 }
 #puzzle #a03,#puzzle #a13,#puzzle #a23,#puzzle #a33,#puzzle #a43,
 #puzzle #a53,#puzzle #a63,#puzzle #a73,#puzzle #a83,#puzzle #a06,
 #puzzle #a16,#puzzle #a26,#puzzle #a36,#puzzle #a46,#puzzle #a56,
 #puzzle #a66,#puzzle #a76,#puzzle #a86 {
-    border-left: 2px #222 solid;
+    border-left: 2px var(--dark-gray) solid;
 }
 
 
