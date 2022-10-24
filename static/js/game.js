@@ -101,12 +101,19 @@ function setDifficultyCircles() {
     let solid = '<img src="images/solid_circle.png" class="diff_circle">';
     let content = "";
 
-    if (clientState["difficulty"] === "one"){ content = solid + empty + empty + empty; }
-    if (clientState["difficulty"] === "two"){ content = solid + solid + empty + empty; }
+    if (clientState["difficulty"] === "one")  { content = solid + empty + empty + empty; }
+    if (clientState["difficulty"] === "two")  { content = solid + solid + empty + empty; }
     if (clientState["difficulty"] === "three"){ content = solid + solid + solid + empty; }
-    if (clientState["difficulty"] === "four"){ content = solid + solid + solid + solid; }    
+    if (clientState["difficulty"] === "four") { content = solid + solid + solid + solid; }    
     
     document.getElementById("difficulty_button").innerHTML = content;
+
+    // use this to underline the current difficulty in menu dropdown
+    document.querySelectorAll("#difficulty a.dropdown-item").forEach(function(item){
+        if (item.dataset["diff"] === clientState["difficulty"]){
+            item.className += " text-decoration-underline";
+        }
+    })
 }
         
 
