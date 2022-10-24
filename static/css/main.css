@@ -50,6 +50,7 @@ li, main, nav, nav a, ol, p, section, span, ul {
     align-items: center;
 }
 
+/* control puzzle size */
 #puzzle {
     width: min-content;
     height: min-content;
@@ -66,7 +67,18 @@ li, main, nav, nav a, ol, p, section, span, ul {
     border: 0pt;
     text-align: left;
     width: 100px;
+    margin-bottom: 10px;
 }
+#difficulty {
+    float: right;
+}
+.diff_circle {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin: 1px;
+}
+
 
 #submitbutt {
     display: block;
