@@ -29,6 +29,10 @@ function init() {
     document.getElementById("nextpuzzleControl").onclick = function () {
         getpuzzle(clientState['difficulty']);
     }
+
+    document.querySelectorAll("#difficulty a.dropdown-item").forEach(function(item){
+        item.onclick = changeDifficulty;
+    })
 }
 window.onload = init;
 
@@ -74,6 +78,13 @@ function submitpuzzle(outdata) {
     });
 }
 
+function changeDifficulty(event) {
+    console.log(event)
+    let newDiff = event.target.dataset["diff"];
+    console.log(event.target);
+    clientState["difficulty"] = newDiff;
+    getpuzzle(clientState["difficulty"]);
+}
 
 // ---------- LOW LEVEL ---------- //
 
