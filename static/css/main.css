@@ -14,8 +14,8 @@
 }
 
 :root{
-    --accentcolor: rgb(170, 99, 215);
-    --clear-accentcolor: rgba(170, 99, 215, 0.541);
+    --accentcolor: rgb(90, 136, 173);
+    --clear-accentcolor: rgba(90, 136,173, 0.541);
 }
 
 .diff_circle {
