@@ -4,6 +4,10 @@
     main.css
     This holds styling rules external to bootstrap classes
 */
+@font-face {
+    font-family: Rubik;
+    src: url("resources/Rubik-Regular.ttf") format("truetype");
+}
 
 
 :root{
@@ -38,17 +42,18 @@
     border-collapse: collapse; 
 }
 
-/* height & width of input controls overall puzzle size */
+/* style number inputs inside cells */
 #puzzle td > input {
+
+    /* size of these inputs determine overall table size */
     height: 8vw;
     width: 8vw;
     max-height: 50px;
     max-width: 50px;
-}
 
-/* style number inputs inside cells */
-#puzzle td > input {
-    font-size: 1.25rem;
+    /* style the font */
+    font-family: Rubik serif;
+    font-size: 1.5rem;
     color: #000;
     text-align: center;
     border: 0px;
