@@ -85,9 +85,15 @@ li, main, nav, nav a, ol, p, section, span, ul {
     cursor: pointer;
 }
 
+#spacer {
+    text-decoration: none;
+    float: left;
+}
+
 #nextpuzzleControl {
-    font-size: var(--little-text);
     float: right;
+    margin-top: 10px;
+    font-size: var(--little-text);
     text-decoration: none;
     color: var(--reg-gray);
 }
