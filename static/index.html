@@ -5,66 +5,17 @@
     <title>Pseudoku</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <script type="module" src="js/game.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 
 <body>
-    <div id="content">
-        <div id="settings">
-            <img id="settingsIcon" src="images/gear1.png">
-            <form id="settingsContent">
-                <div>
-                    <span>Difficulty:</span>
-                    <label for="one">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <img src="images/empty_circle2.png" class="diff_circle">
-                        <img src="images/empty_circle2.png" class="diff_circle">
-                        <img src="images/empty_circle2.png" class="diff_circle">
-                        <input type="radio" name="difficulty" id="one" value="one">
-                    </label>
-                    <label for="two">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <img src="images/empty_circle2.png" class="diff_circle">
-                        <img src="images/empty_circle2.png" class="diff_circle">
-                        <input type="radio" name="difficulty" id="two" value="two">
-                    </label>
-                    <label for="three">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <img src="images/empty_circle2.png" class="diff_circle">
-                        <input type="radio" name="difficulty" id="three" value="three">
-                    </label>
-                    <label for="four">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <img src="images/solid_circle.png" class="diff_circle">
-                        <input type="radio" name="difficulty" id="four" value="four">
-                    </label>
-                </div>
-                <div>
-                    <label for="username">
-                        Username:
-                    </label>
-                    <input name="username" id="username" type="text" size="10" maxlength="10">
-                </div>
-                <div>
-                    <label>
-                        Dark mode:
-                        <input name="darkmodeButton" id="darkmodeButton" type="checkbox">
-                    </label>
-                </div>
-                <div>
-                    <button id="settingsSubmit">Save settings</button>
-                </div>
-            </form>
-        </div>
+    <div class="vh-100 d-flex justify-content-center align-items-center">
         <div id="puzzle">
-            <div>
-                <input id="timer" name="timer" type="text" value="00:00:00" readonly="true">
-                <div id="difficulty">
+            <div class="mb-2">
+                <input id="timer" name="timer" type="text" value="00:00:00" readonly="true" class="text-start fs-6 border-0">
+                <div id="difficulty" class="float-end">
                     <img src="images/solid_circle.png" class="diff_circle"><img src="images/empty_circle2.png" class="diff_circle"><img src="images/empty_circle2.png" class="diff_circle"><img src="images/empty_circle2.png" class="diff_circle">
                 </div>
             </div>
@@ -432,21 +383,28 @@
 
                 </tbody>
             </table>
-            <div>
-                <a href="#" id="nextpuzzleControl">skip</a>
-                <a href="#" id="spacer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <button id="submitbutt" type="button">Submit</button>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" id="spacer" class="text-decoration-none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <button id="submitbutt" type="button" class="d-block fs-4 p-2 ms-auto me-auto rounded-3 border-0 w-50">submit</button>
+                <a href="#" id="nextpuzzleControl" class="text-decoration-none link-secondary">skip</a>
             </div>
         </div>
-        <div id="completeModal" class="modal">
-            <div class="modal-content">
-                <h2>Congratulations!</h2>
-                <span id="yourtime"></span>
-                <div>
-                    <button id="retrypuzzleModal">Retry</button>
-                    <button id="newpuzzleModal">New</button>
+        <div id="completeModal" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Congratulations</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body">
+                  <p><span id="yourtime"></span>.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" id="newpuzzleModal" class="btn btn-primary">New puzzle</button>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
 </body>
