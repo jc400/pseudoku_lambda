@@ -80,12 +80,21 @@ li, main, nav, nav a, ol, p, section, span, ul {
     border-style: 1px var(--reg-gray) solid;
     border-radius: 20px;
 }
+#submitbutt:hover {
+    background-color: var(--accentcolor);
+    transition-duration: 2s;
+}
 
 #nextpuzzleControl {
     font-size: var(--little-text);
     float: right;
     text-decoration: none;
     color: var(--reg-gray);
+}
+#nextpuzzleControl:hover {
+    color: var(--dark-gray);
+    text-decoration: underline;
+    transition-duration: 1s;
 }
 
 
