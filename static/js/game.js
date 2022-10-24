@@ -40,8 +40,8 @@ function init() {
     setDifficultyCircles();
 
 }
-window.onload = init;
-
+//window.onload = init;
+window.addEventListener("load", init);
 
 // --------- HIGH LEVEL ---------- //
 
