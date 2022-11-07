@@ -14,8 +14,8 @@
 }
 
 :root{
-    --accentcolor: rgb(90, 136, 173);
-    --clear-accentcolor: rgba(90, 136,173, 0.541);
+    --accentcolor: #4300ff;
+    --clear-accentcolor: #4400ff81;
 }
 
 
