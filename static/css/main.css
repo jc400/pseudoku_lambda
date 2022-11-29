@@ -15,15 +15,15 @@
 
 :root{
     --accentcolor: #4300ff;
-    --clear-accentcolor: #4400ff81;
 }
 
 
 #submitbutt {
-    background-color: var(--clear-accentcolor);
+    background-color: var(--accentcolor);
+    color: white;
 }
 #submitbutt:hover {
-    background-color: var(--accentcolor);
+    opacity: 0.9;
     cursor: pointer;
 }
 
