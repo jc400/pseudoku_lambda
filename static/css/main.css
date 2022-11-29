@@ -33,43 +33,45 @@
 /*       FOR PUZZLE TABLE        */
 /* ============================= */
 
-/* collapse all borders inside sudoku table */
-#puzzle table { 
-    border-collapse: collapse; 
+/* Sizing for small screens */
+#puzzle td > input {
+    height: 10vw;
+    width: 10vw; 
+    font-size: 5vw;
 }
 
-#puzzle td {
-    line-height: 0;
+/* Sizing for larger screens */
+@media only screen and (min-width: 500px){
+    #puzzle td > input {
+        height: 50px;
+        width: 50px; 
+        font-size: 1.6rem;
+    }
 }
 
 /* style number inputs inside cells */
 #puzzle td > input {
-
-    /* size of these inputs determine overall table size */
-    height: 10vw;
-    width: 10vw; 
-    max-height: 50px;
-    max-width: 50px;
-
-    /* style the font */
     font-family: Rubik-Light;
-    font-size: 5vw;
     line-height: 1;
     color: #000;
     text-align: center;
     border: 0px;
     padding:0px;
 }
-#puzzle .cellinput {
+#puzzle td > input.cellinput {
     color: var(--accentcolor);
     font-weight: bold;
     font-family: Rubik;
 }
 
 /* styling for cell borders--call out specific cells for thicker lines */
+#puzzle table { 
+    border-collapse: collapse; 
+}
 #puzzle td {
     border: 1px #888 solid;
     padding: 0px;
+    line-height: 0;
 }
 #puzzle #a30,#puzzle #a31,#puzzle #a32,#puzzle #a33,#puzzle #a34,
 #puzzle #a35,#puzzle #a36,#puzzle #a37,#puzzle #a38,#puzzle #a60,
